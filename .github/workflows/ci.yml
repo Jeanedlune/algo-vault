@@ -11,8 +11,50 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  changes:
+    name: detect changes
+    runs-on: ubuntu-latest
+    outputs:
+      js: ${{ steps.filter.outputs.js }}
+      ts: ${{ steps.filter.outputs.ts }}
+      py: ${{ steps.filter.outputs.py }}
+      go: ${{ steps.filter.outputs.go }}
+      cs: ${{ steps.filter.outputs.cs }}
+      cpp: ${{ steps.filter.outputs.cpp }}
+      docs: ${{ steps.filter.outputs.docs }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dorny/paths-filter@v3
+        id: filter
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          filters: |
+            js:
+              - '**/*.js'
+            ts:
+              - '**/*.ts'
+            py:
+              - '**/*.py'
+            go:
+              - '**/*.go'
+            cs:
+              - '**/*.cs'
+              - '**/*.csproj'
+              - '**/*.sln'
+            cpp:
+              - '**/*.cpp'
+              - '**/*.cc'
+              - '**/*.c'
+              - '**/*.hpp'
+              - '**/*.h'
+            docs:
+              - '**/*.md'
+              - '.github/**/*.yml'
+              - '.github/**/*.yaml'
+
   python:
-    if: ${{ hashFiles('**/*.py') != '' }}
+    needs: changes
+    if: ${{ needs.changes.outputs.py == 'true' }}
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -25,7 +67,8 @@ jobs:
       - run: ruff . || true
 
   node:
-    if: ${{ hashFiles('**/*.js', '**/*.ts') != '' }}
+    needs: changes
+    if: ${{ needs.changes.outputs.js == 'true' || needs.changes.outputs.ts == 'true' }}
     runs-on: ubuntu-latest
     timeout-minutes: 7
     steps:
@@ -33,18 +76,29 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-      - name: ESLint (JS only)
-        if: ${{ hashFiles('**/*.js') != '' }}
-        run: npx -y eslint@9 . || true
-      - name: TypeScript type-check
-        if: ${{ hashFiles('**/*.ts') != '' }}
+      - name: ESLint (JS changed)
+        if: ${{ needs.changes.outputs.js == 'true' }}
+        run: npx -y eslint@9 '**/*.js' || true
+      - name: TypeScript type-check (TS changed)
+        if: ${{ needs.changes.outputs.ts == 'true' }}
         run: npx -y tsc@5 --noEmit || true
-      - name: Prettier check (common files)
-        if: ${{ hashFiles('**/*.js', '**/*.ts', '**/*.md', '**/*.json', '**/*.yml', '**/*.yaml') != '' }}
-        run: npx -y prettier@3 --check . || true
+
+  docs:
+    needs: changes
+    if: ${{ needs.changes.outputs.docs == 'true' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Prettier check (docs & workflow files)
+        run: npx -y prettier@3 --check '**/*.md' '.github/**/*.yml' '.github/**/*.yaml' || true
 
   go:
-    if: ${{ hashFiles('**/*.go') != '' }}
+    needs: changes
+    if: ${{ needs.changes.outputs.go == 'true' }}
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -57,7 +111,8 @@ jobs:
       - run: go test ./... || true
 
   csharp:
-    if: ${{ hashFiles('**/*.cs', '**/*.csproj', '**/*.sln') != '' }}
+    needs: changes
+    if: ${{ needs.changes.outputs.cs == 'true' }}
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -69,7 +124,8 @@ jobs:
       - run: dotnet format --verify-no-changes || true
 
   cpp:
-    if: ${{ hashFiles('**/*.cpp', '**/*.cc', '**/*.c', '**/*.hpp', '**/*.h') != '' }}
+    needs: changes
+    if: ${{ needs.changes.outputs.cpp == 'true' }}
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
