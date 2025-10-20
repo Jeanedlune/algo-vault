@@ -76,12 +76,16 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
+          cache: 'npm'
+          cache-dependency-path: 'package-lock.json'
+      - name: Install dev deps (cached)
+        run: npm ci --prefer-offline --no-audit --no-fund
       - name: ESLint (JS changed)
         if: ${{ needs.changes.outputs.js == 'true' }}
-        run: npx -y eslint@9 '**/*.js' || true
+        run: npm run lint:js || true
       - name: TypeScript type-check (TS changed)
         if: ${{ needs.changes.outputs.ts == 'true' }}
-        run: npx -y tsc@5 --noEmit || true
+        run: npm run typecheck || true
 
   docs:
     needs: changes
@@ -93,8 +97,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
+          cache: 'npm'
+          cache-dependency-path: 'package-lock.json'
+      - name: Install dev deps (cached)
+        run: npm ci --prefer-offline --no-audit --no-fund
       - name: Prettier check (docs & workflow files)
-        run: npx -y prettier@3 --check '**/*.md' '.github/**/*.yml' '.github/**/*.yaml' || true
+        run: npm run format:check:docs || true
 
   go:
     needs: changes
