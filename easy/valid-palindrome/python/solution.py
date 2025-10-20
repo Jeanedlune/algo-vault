@@ -31,7 +31,13 @@ def is_palindrome(s: str) -> bool:
 
 
 if __name__ == "__main__":
-    print(
-        f"'A man, a plan, a canal: Panama' is palindrome: {is_palindrome('A man, a plan, a canal: Panama')}"
-    )
-    print(f"'race a car' is palindrome: {is_palindrome('race a car')}")
+    # Test cases from README
+    assert is_palindrome("A man, a plan, a canal: Panama") is True
+    assert is_palindrome("race a car") is False
+    assert is_palindrome("Was it a car or a cat I saw?") is True
+    assert is_palindrome("tab a cat") is False
+    assert is_palindrome("") is True
+    assert is_palindrome(".,") is True
+    # Note: "ab@a" should be True, correcting the README test case
+    assert is_palindrome("ab@a") is True
+    print("All test cases passed!")
