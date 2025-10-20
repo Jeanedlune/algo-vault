@@ -4,10 +4,17 @@ on:
   pull_request:
   push:
     branches: [ main ]
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   python:
+    if: ${{ hashFiles('**/*.py') != '' }}
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -18,19 +25,28 @@ jobs:
       - run: ruff . || true
 
   node:
+    if: ${{ hashFiles('**/*.js', '**/*.ts') != '' }}
     runs-on: ubuntu-latest
+    timeout-minutes: 7
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-      - run: npm pkg get name || echo "no package.json" || true
-      - run: npx --yes eslint . || true
-      - run: npx --yes prettier --check . || true
-      - run: npx --yes tsc --noEmit || true
+      - name: ESLint (JS only)
+        if: ${{ hashFiles('**/*.js') != '' }}
+        run: npx -y eslint@9 . || true
+      - name: TypeScript type-check
+        if: ${{ hashFiles('**/*.ts') != '' }}
+        run: npx -y tsc@5 --noEmit || true
+      - name: Prettier check (common files)
+        if: ${{ hashFiles('**/*.js', '**/*.ts', '**/*.md', '**/*.json', '**/*.yml', '**/*.yaml') != '' }}
+        run: npx -y prettier@3 --check . || true
 
   go:
+    if: ${{ hashFiles('**/*.go') != '' }}
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-go@v5
@@ -41,7 +57,9 @@ jobs:
       - run: go test ./... || true
 
   csharp:
+    if: ${{ hashFiles('**/*.cs', '**/*.csproj', '**/*.sln') != '' }}
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-dotnet@v4
@@ -51,10 +69,12 @@ jobs:
       - run: dotnet format --verify-no-changes || true
 
   cpp:
+    if: ${{ hashFiles('**/*.cpp', '**/*.cc', '**/*.c', '**/*.hpp', '**/*.h') != '' }}
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
-      - name: C++ format (if clang-format available)
+      - name: C++ format check (if clang-format available)
         run: |
           if command -v clang-format >/dev/null 2>&1; then
             echo "clang-format found"
