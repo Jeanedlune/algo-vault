@@ -60,7 +60,7 @@ Each language targets 45 problems.
 
 - Go: [####------------------------------------] 2/45 (4%)
 - TypeScript: [####------------------------------------] 2/45 (4%)
-- Python: [###############-------------------------] 7/45 (16%)
+- Python: [################------------------------] 8/45 (18%)
 - JavaScript: [####------------------------------------] 2/45 (4%)
 - C#: [####------------------------------------] 2/45 (4%)
 - C++: [####------------------------------------] 2/45 (4%)
@@ -84,7 +84,7 @@ Each language targets 45 problems.
   - [x] Valid Palindrome (`easy/valid-palindrome/`) - 1/6 languages
   - [ ] Reverse Integer
   - [ ] Plus One
-  - [ ] Move Zeroes
+  - [x] Move Zeroes (`easy/move-zeroes/`) - 1/6 languages
   - [ ] Single Number
   - [x] Majority Element (`easy/majority-element/`) - 6/6 languages ✅
   - [x] Contains Duplicate (`easy/contains-duplicate/`) - 1/6 languages
