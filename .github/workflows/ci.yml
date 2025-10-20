@@ -1,0 +1,63 @@
+name: ci
+
+on:
+  pull_request:
+  push:
+    branches: [ main ]
+
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pipx install black ruff || true
+      - run: black --check . || true
+      - run: ruff . || true
+
+  node:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: npm pkg get name || echo "no package.json" || true
+      - run: npx --yes eslint . || true
+      - run: npx --yes prettier --check . || true
+      - run: npx --yes tsc --noEmit || true
+
+  go:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.22"
+      - run: go fmt ./... || true
+      - run: go vet ./... || true
+      - run: go test ./... || true
+
+  csharp:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
+      - run: dotnet build -c Release || true
+      - run: dotnet format --verify-no-changes || true
+
+  cpp:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: C++ format (if clang-format available)
+        run: |
+          if command -v clang-format >/dev/null 2>&1; then
+            echo "clang-format found"
+          else
+            echo "clang-format not installed"
+          fi

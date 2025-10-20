@@ -1,0 +1,60 @@
+# General
+.DS_Store
+Thumbs.db
+*.log
+logs/
+*.swp
+*.swo
+
+# Serena project files (do not push)
+.serena/
+
+# Node / TypeScript / JavaScript
+node_modules/
+dist/
+build/
+coverage/
+.nyc_output/
+.eslintcache
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Go
+bin/
+vendor/
+*.test
+
+# C# / .NET
+bin/
+obj/
+.vs/
+*.user
+*.suo
+
+# C++
+build/
+*.o
+*.a
+*.so
+*.dll
+*.exe
+*.out
+
+# IDE / Editors
+.vscode/
+.idea/
+*.code-workspace
