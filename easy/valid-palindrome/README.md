@@ -30,7 +30,7 @@ Given a string `s`, determine if it is a palindrome, considering only alphanumer
 4.  **Input:** `".,"` (Only non-alphanumeric)
     **Output:** `true`
 5.  **Input:** `"ab@a"`
-    **Output:** `false`
+    **Output:** `true`
 
 ## Time and Space Complexity
 

@@ -1,6 +1,3 @@
-
-
-
 def is_palindrome(s: str) -> bool:
     """
     Determines if a string is a palindrome, considering only alphanumeric characters and ignoring cases.
