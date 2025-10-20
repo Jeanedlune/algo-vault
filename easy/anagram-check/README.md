@@ -25,7 +25,7 @@ Given two strings `s` and `t`, return `true` if `t` is an anagram of `s`, and `f
     **Output:** `false`
 3.  **Input:** `s = "aacc"`, `t = "ccac"`
     **Output:** `false` (Character counts must match)
-4.  **Input:** `s = "railsafety"`, `t = "fairytales"` (Assuming spaces are ignored and handled)
+4.  **Input:** `s = "railsafety"`, `t = "fairytales"` 
     **Output:** `true`
 5.  **Input:** `s = "dormitory"`, `t = "dirtyroom"`
     **Output:** `true`
