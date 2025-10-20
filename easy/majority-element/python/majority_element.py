@@ -1,5 +1,6 @@
 from typing import List
 
+
 def majority_element(nums: List[int]) -> int:
     """
     Finds the majority element in a list of numbers.
@@ -20,6 +21,6 @@ def majority_element(nums: List[int]) -> int:
     for num in nums:
         if count == 0:
             candidate = num
-        count += (1 if num == candidate else -1)
+        count += 1 if num == candidate else -1
 
     return candidate
