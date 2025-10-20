@@ -58,18 +58,18 @@ algo-vault/
 
 Each language targets 45 problems.
 
-- Go: [#####-----------------------------------] 1/45 (2%)
-- TypeScript: [#####-----------------------------------] 1/45 (2%)
-- Python: [#####-----------------------------------] 1/45 (2%)
-- JavaScript: [#####-----------------------------------] 1/45 (2%)
-- C#: [#####-----------------------------------] 1/45 (2%)
-- C++: [#####-----------------------------------] 1/45 (2%)
+- Go: [####------------------------------------] 2/45 (4%)
+- TypeScript: [####------------------------------------] 2/45 (4%)
+- Python: [###############-------------------------] 7/45 (16%)
+- JavaScript: [####------------------------------------] 2/45 (4%)
+- C#: [####------------------------------------] 2/45 (4%)
+- C++: [####------------------------------------] 2/45 (4%)
 
 ## Algorithms checklist
 
 - Easy (20)
-  - [x] Two Sum (`easy/two-sum/`)
-  - [ ] Reverse String
+  - [x] Two Sum (`easy/two-sum/`) - 6/6 languages ✅
+  - [x] Reverse String (`easy/reverse-string/`) - 1/6 languages
   - [ ] Palindrome Check
   - [ ] FizzBuzz
   - [ ] Find Maximum in Array
@@ -77,17 +77,17 @@ Each language targets 45 problems.
   - [ ] Factorial
   - [ ] Fibonacci Sequence
   - [ ] Sum of Array
-  - [ ] Find Minimum
+  - [x] Find Minimum (`easy/find-minimum/`) - 1/6 languages
   - [ ] Remove Duplicates
-  - [ ] Anagram Check
+  - [x] Anagram Check (`easy/anagram-check/`) - 1/6 languages
   - [ ] First Unique Character
-  - [ ] Valid Palindrome
+  - [x] Valid Palindrome (`easy/valid-palindrome/`) - 1/6 languages
   - [ ] Reverse Integer
   - [ ] Plus One
   - [ ] Move Zeroes
   - [ ] Single Number
-  - [ ] Majority Element
-  - [ ] Contains Duplicate
+  - [x] Majority Element (`easy/majority-element/`) - 6/6 languages ✅
+  - [x] Contains Duplicate (`easy/contains-duplicate/`) - 1/6 languages
 
 - Medium (15)
   - [ ] Binary Search (`medium/binary-search/`)
@@ -128,11 +128,13 @@ Each language targets 45 problems.
 - Run formatters/linters (see CONTRIBUTING.md).
 - Open a PR using the provided template.
 
-## Contributors leaderboard
+## Contributors
 
-- Contributors graph: https://github.com/Jeanedlune/algo-vault/graphs/contributors
-- Visual:  
-  [![Contributors](https://contrib.rocks/image?repo=Jeanedlune/algo-vault)](https://github.com/Jeanedlune/algo-vault/graphs/contributors)
+Thanks to all contributors who have helped make this project better!
+
+[![Contributors](https://contrib.rocks/image?repo=Jeanedlune/algo-vault&max=100&columns=12)](https://github.com/Jeanedlune/algo-vault/graphs/contributors)
+
+View detailed contribution stats: [Contributors Graph](https://github.com/Jeanedlune/algo-vault/graphs/contributors)
 
 ## Code of Conduct and Contributing
 
