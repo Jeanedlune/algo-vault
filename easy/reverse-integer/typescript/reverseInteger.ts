@@ -17,6 +17,5 @@ export function reverseInteger(x: number): number {
   }
 
   rev *= sign;
-  if (rev < INT_MIN || rev > INT_MAX) return 0;
   return rev;
 }

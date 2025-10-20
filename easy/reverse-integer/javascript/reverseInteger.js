@@ -18,12 +18,5 @@ export function reverseInteger(x) {
   }
 
   rev *= sign;
-  if (rev < INT_MIN || rev > INT_MAX) return 0;
   return rev;
-}
-
-// Quick manual run when executed directly (Node ESM required)
-if (typeof process !== 'undefined' && process.argv[1] && process.argv[1].endsWith('reverseInteger.js')) {
-  const cases = [123, -123, 120, 0, 1534236469];
-  for (const c of cases) console.log(c, '->', reverseInteger(c));
 }

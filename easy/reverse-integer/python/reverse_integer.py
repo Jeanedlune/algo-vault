@@ -15,8 +15,3 @@ def reverse_integer(x: int) -> int:
         return 0
     return rev
 
-
-if __name__ == "__main__":
-    cases = [123, -123, 120, 0, 1534236469]
-    for c in cases:
-        print(c, "->", reverse_integer(c))

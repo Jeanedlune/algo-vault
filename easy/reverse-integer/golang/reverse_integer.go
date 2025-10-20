@@ -6,25 +6,17 @@ func ReverseInteger(x int) int {
     const INT_MIN = -2147483648
     const INT_MAX = 2147483647
 
-    a := int64(x)
-    sign := int64(1)
-    if a < 0 {
-        sign = -1
-        a = -a
-    }
-
-    var rev int64 = 0
-    for a != 0 {
-        digit := a % 10
-        a /= 10
-        if rev > (int64(INT_MAX)-digit)/10 {
+    rev := 0
+    for x != 0 {
+        pop := x % 10
+        x /= 10
+        if rev > INT_MAX/10 || (rev == INT_MAX/10 && pop > 7) {
             return 0
         }
-        rev = rev*10 + digit
+        if rev < INT_MIN/10 || (rev == INT_MIN/10 && pop < -8) {
+            return 0
+        }
+        rev = rev*10 + pop
     }
-    rev *= sign
-    if rev < int64(INT_MIN) || rev > int64(INT_MAX) {
-        return 0
-    }
-    return int(rev)
+    return rev
 }
