@@ -1,0 +1,15 @@
+# Ignore non-JS files and common artifacts
+**/*.ts
+**/*.go
+**/*.py
+**/*.cs
+**/*.cpp
+**/*.hpp
+**/*.cc
+node_modules/
+dist/
+build/
+coverage/
+.nyc_output/
+.eslintcache
+.serena/

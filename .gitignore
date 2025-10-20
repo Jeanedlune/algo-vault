@@ -6,7 +6,6 @@ logs/
 *.swp
 *.swo
 
-# Serena project files (do not push)
 .serena/
 
 # Node / TypeScript / JavaScript

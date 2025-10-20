@@ -141,4 +141,4 @@ Each language targets 45 problems.
 
 ## License
 
-MIT — see `LICENSE`
+MIT - see `LICENSE`
