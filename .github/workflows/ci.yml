@@ -3,7 +3,7 @@ name: ci
 on:
   pull_request:
   push:
-    branches: [ main ]
+    branches: [main]
   workflow_dispatch:
 
 concurrency:
@@ -76,8 +76,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: 'npm'
-          cache-dependency-path: 'package-lock.json'
+          cache: "npm"
+          cache-dependency-path: "package-lock.json"
       - name: Install dev deps (cached)
         run: npm ci --prefer-offline --no-audit --no-fund
       - name: ESLint (JS changed)
@@ -97,8 +97,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: 'npm'
-          cache-dependency-path: 'package-lock.json'
+          cache: "npm"
+          cache-dependency-path: "package-lock.json"
       - name: Install dev deps (cached)
         run: npm ci --prefer-offline --no-audit --no-fund
       - name: Prettier check (docs & workflow files)

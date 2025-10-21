@@ -7,10 +7,13 @@ assignees: ""
 ---
 
 ## Summary
+
 What and why.
 
 ## Proposal
+
 How it should work.
 
 ## Impact
+
 Benefits and potential trade-offs.

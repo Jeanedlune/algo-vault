@@ -21,9 +21,11 @@ Thank you for your interest in contributing. This repository is designed to be b
 These are the default style baselines. Use them consistently unless the problem folder specifies otherwise.
 
 ### Go
+
 - Format: `go fmt ./...`
 - Vet: `go vet ./...`
 - Example:
+
 ```go
 package twosum
 
@@ -40,8 +42,10 @@ func TwoSum(nums []int, target int) []int {
 ```
 
 ### TypeScript
+
 - Lint: `npx eslint .` | Format: `npx prettier --check .` | Type: `npx tsc --noEmit`
 - Example:
+
 ```ts
 export function twoSum(nums: number[], target: number): number[] {
   const idx = new Map<number, number>();
@@ -55,8 +59,10 @@ export function twoSum(nums: number[], target: number): number[] {
 ```
 
 ### Python
+
 - Format: `black .` | Lint: `ruff .` | Tests: `pytest`
 - Example:
+
 ```python
 from typing import List
 
@@ -71,8 +77,10 @@ def two_sum(nums: List[int], target: int) -> List[int]:
 ```
 
 ### JavaScript
+
 - Lint: `npx eslint .` | Format: `npx prettier --check .`
 - Example:
+
 ```js
 export function twoSum(nums, target) {
   const idx = new Map();
@@ -86,8 +94,10 @@ export function twoSum(nums, target) {
 ```
 
 ### C#
+
 - Build/format: `dotnet build -c Release` / `dotnet format`
 - Example:
+
 ```csharp
 using System.Collections.Generic;
 
@@ -111,8 +121,10 @@ namespace AlgoVault.Easy
 ```
 
 ### C++
+
 - Standard: C++17 | Prefer `std::vector`, `std::unordered_map`
 - Example:
+
 ```cpp
 #include <vector>
 #include <unordered_map>
@@ -133,6 +145,7 @@ vector<int> twoSum(const vector<int>& nums, int target) {
 ## Commit messages
 
 Use Conventional Commits:
+
 - `feat(ts): implement two-sum`
 - `test(py): add edge cases for two-sum`
 - `docs: add problem README for binary-search`

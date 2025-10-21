@@ -3,6 +3,7 @@
 ## Problem Statement
 
 Given an integer `n`, return a list of strings where:
+
 - `answer[i] == "FizzBuzz"` if `i` is divisible by 3 and 5.
 - `answer[i] == "Fizz"` if `i` is divisible by 3.
 - `answer[i] == "Buzz"` if `i` is divisible by 5.
@@ -23,7 +24,7 @@ The list should be for numbers from 1 to `n`.
 
 ## Constraints
 
--   `1 <= n <= 10^4`
+- `1 <= n <= 10^4`
 
 ## Test Cases
 
@@ -36,8 +37,7 @@ The list should be for numbers from 1 to `n`.
 4.  **Input:** `n = 10`
     **Output:** `["1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz"]`
 
-
 ## Time and Space Complexity
 
--   **Target Time Complexity:** O(n), as we iterate from 1 to n.
--   **Target Space Complexity:** O(n), to store the resulting list of strings.
+- **Target Time Complexity:** O(n), as we iterate from 1 to n.
+- **Target Space Complexity:** O(n), to store the resulting list of strings.

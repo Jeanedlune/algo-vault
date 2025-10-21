@@ -7,10 +7,12 @@ assignees: ""
 ---
 
 ## Problem
+
 - Slug/path: `<difficulty>/<problem-slug>/`
 - Language: `<golang|typescript|python|javascript|csharp|cpp>`
 
 ## Acceptance criteria
+
 - Function signature is clear and testable
 - 3–5 tests added or verified in README
 - Time/space complexity documented in README
