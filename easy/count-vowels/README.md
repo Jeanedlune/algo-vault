@@ -20,7 +20,7 @@ Output: `3`
 | "AEIOU" | 5 |
 | "xyz" | 0 |
 | "" | 0 |
-| "ChatGPT rocks!" | 3 |
+| "ChatGPT rocks!" | 2 |
 
 ### Complexity
 - **Time:** O(n)  
