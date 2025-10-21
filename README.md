@@ -60,7 +60,7 @@ Each language targets 45 problems.
 
 - Go: [####------------------------------------] 2/45 (4%)
 - TypeScript: [####------------------------------------] 2/45 (4%)
-- Python: [####################--------------------] 10/45 (22%)
+- Python: [########################----------------] 12/45 (27%)
 - JavaScript: [####------------------------------------] 2/45 (4%)
 - C#: [####------------------------------------] 2/45 (4%)
 - C++: [####------------------------------------] 2/45 (4%)
@@ -70,10 +70,10 @@ Each language targets 45 problems.
 - Easy (20)
   - [x] Two Sum (`easy/two-sum/`) - 6/6 languages ✅
   - [x] Reverse String (`easy/reverse-string/`) - 1/6 languages
-  - [ ] Palindrome Check
+  - [x] Palindrome Check (`easy/palindrome-check/`) - 1/6 languages
   - [x] FizzBuzz (`easy/fizzbuzz/`) - 1/6 languages
   - [ ] Find Maximum in Array
-  - [ ] Count Vowels
+  - [x] Count Vowels (`easy/count-vowels/`) - 1/6 languages
   - [ ] Factorial
   - [x] Fibonacci Sequence (`easy/fibonacci/`) - 1/6 languages
   - [ ] Sum of Array
