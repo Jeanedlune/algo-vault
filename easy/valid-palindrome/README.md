@@ -16,8 +16,8 @@ Given a string `s`, determine if it is a palindrome, considering only alphanumer
 
 ## Constraints
 
--   `1 <= s.length <= 2 * 10^5`
--   `s` consists only of printable ASCII characters.
+- `1 <= s.length <= 2 * 10^5`
+- `s` consists only of printable ASCII characters.
 
 ## Test Cases
 
@@ -34,5 +34,5 @@ Given a string `s`, determine if it is a palindrome, considering only alphanumer
 
 ## Time and Space Complexity
 
--   **Time Complexity:** O(n), where n is the length of the string. We iterate through the string at most once.
--   **Space Complexity:** O(1), if we modify the string in-place or use pointers. O(n) if we create a new sanitized string. (The two-pointer approach will be O(1)).
+- **Time Complexity:** O(n), where n is the length of the string. We iterate through the string at most once.
+- **Space Complexity:** O(1), if we modify the string in-place or use pointers. O(n) if we create a new sanitized string. (The two-pointer approach will be O(1)).

@@ -16,6 +16,7 @@ This repository is a Hacktoberfest-friendly multi-language Algorithms & Data Str
 ## Language-Specific Guidelines
 
 ### Go
+
 - Use `go fmt` for formatting
 - Run `go vet` for static analysis
 - Prefer `CamelCase` for exported names, `mixedCaps` for internal
@@ -24,6 +25,7 @@ This repository is a Hacktoberfest-friendly multi-language Algorithms & Data Str
 - Check for error handling - don't ignore errors
 
 ### TypeScript
+
 - Use strict typing (`--strict` mode)
 - Prefer named exports over default exports
 - Use descriptive type names and interfaces
@@ -32,6 +34,7 @@ This repository is a Hacktoberfest-friendly multi-language Algorithms & Data Str
 - Prefer `const` over `let`, never use `var`
 
 ### Python
+
 - Follow PEP 8 style guide
 - Use type hints for function signatures
 - Format with Black (line length 88)
@@ -40,6 +43,7 @@ This repository is a Hacktoberfest-friendly multi-language Algorithms & Data Str
 - Use `pytest` for testing
 
 ### JavaScript
+
 - Use ESLint with Standard or Airbnb style
 - Prefer `const` and `let` over `var`
 - Use arrow functions for callbacks
@@ -48,6 +52,7 @@ This repository is a Hacktoberfest-friendly multi-language Algorithms & Data Str
 - Use strict equality (`===`) not loose equality (`==`)
 
 ### C#
+
 - Follow Microsoft's C# coding conventions
 - Use PascalCase for public members, camelCase for private
 - Use file-scoped namespaces
@@ -56,6 +61,7 @@ This repository is a Hacktoberfest-friendly multi-language Algorithms & Data Str
 - Run `dotnet format` before committing
 
 ### C++
+
 - Use C++17 standard
 - Prefer STL containers over raw arrays
 - Use RAII principles (avoid manual new/delete)
@@ -67,12 +73,14 @@ This repository is a Hacktoberfest-friendly multi-language Algorithms & Data Str
 ## Algorithm Implementation Requirements
 
 ### Correctness
+
 - Solutions must handle all test cases in the problem README
 - Edge cases must be considered (empty input, single element, negative numbers, etc.)
 - No hardcoded solutions - algorithms must be general-purpose
 - Return types must match the problem specification
 
 ### Efficiency
+
 - Target the optimal time complexity stated in problem README
 - Avoid nested loops when O(n) solution exists
 - Use appropriate data structures (HashMap for O(1) lookups, etc.)
@@ -80,6 +88,7 @@ This repository is a Hacktoberfest-friendly multi-language Algorithms & Data Str
 - Don't compute the same value multiple times
 
 ### Code Quality
+
 - Functions should be small and focused (single responsibility)
 - Use meaningful variable names (no `x`, `temp`, `foo` unless contextually clear)
 - Add comments only when code intent is not obvious
@@ -88,6 +97,7 @@ This repository is a Hacktoberfest-friendly multi-language Algorithms & Data Str
 - No console.log/print statements in production code (use tests instead)
 
 ### Testing
+
 - Each implementation should be verifiable against the test cases in README
 - Contributors should manually verify their solution works before submitting
 - When possible, include a simple test harness or assertion checks
@@ -95,12 +105,14 @@ This repository is a Hacktoberfest-friendly multi-language Algorithms & Data Str
 ## Specific Anti-Patterns to Flag
 
 ### Security Issues
+
 - Never hardcode sensitive data (API keys, passwords)
 - Validate all external input
 - Avoid eval() or equivalent in any language
 - Use parameterized queries if database operations are involved
 
 ### Common Mistakes
+
 - Off-by-one errors in loops
 - Integer overflow (especially in languages without big integers)
 - Modifying input arrays when not required

@@ -1,5 +1,6 @@
 from typing import List
 
+
 def move_zeroes(nums: List[int]) -> List[int]:
     """
     Moves all zeros to the end while maintaining the order of non-zero elements.
