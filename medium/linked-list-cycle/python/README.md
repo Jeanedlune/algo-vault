@@ -7,7 +7,7 @@ Given the head of a linked list, determine if the linked list has a cycle in it.
 
 ## Constraints
 - 0 <= Node.val <= 10^5
-- -10^5 <= Node.next <= 10^5
+- Node.next is either None or points to another ListNode
 
 ## Example 1
 Input: head = [3,2,0,-4], pos = 1  
