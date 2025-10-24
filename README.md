@@ -58,12 +58,12 @@ algo-vault/
 
 Each language targets 45 problems.
 
-- Go: [####------------------------------------] 2/45 (4%)
-- TypeScript: [####------------------------------------] 2/45 (4%)
-- Python: [########################----------------] 12/45 (27%)
-- JavaScript: [####------------------------------------] 2/45 (4%)
-- C#: [####------------------------------------] 2/45 (4%)
-- C++: [####------------------------------------] 2/45 (4%)
+- Go: [######----------------------------------] 3/45 (7%)
+- TypeScript: [######----------------------------------] 3/45 (7%)
+- Python: [############################----------] 15/45 (33%)
+- JavaScript: [######----------------------------------] 3/45 (7%)
+- C#: [######----------------------------------] 3/45 (7%)
+- C++: [######----------------------------------] 3/45 (7%)
 
 ## Algorithms checklist
 
@@ -72,13 +72,13 @@ Each language targets 45 problems.
   - [x] Reverse String (`easy/reverse-string/`) - 1/6 languages
   - [x] Palindrome Check (`easy/palindrome-check/`) - 1/6 languages
   - [x] FizzBuzz (`easy/fizzbuzz/`) - 1/6 languages
-  - [ ] Find Maximum in Array
+  - [x] Find Maximum in Array (`easy/find-maximum/`) - 6/6 languages ✅
   - [x] Count Vowels (`easy/count-vowels/`) - 1/6 languages
-  - [ ] Factorial
+  - [x] Factorial (`easy/factorial/`) - 1/6 languages
   - [x] Fibonacci Sequence (`easy/fibonacci/`) - 1/6 languages
   - [ ] Sum of Array
   - [x] Find Minimum (`easy/find-minimum/`) - 1/6 languages
-  - [ ] Remove Duplicates
+  - [x] Remove Duplicates (`easy/remove-duplicates/`) - 1/6 languages
   - [x] Anagram Check (`easy/anagram-check/`) - 1/6 languages
   - [ ] First Unique Character
   - [x] Valid Palindrome (`easy/valid-palindrome/`) - 1/6 languages
