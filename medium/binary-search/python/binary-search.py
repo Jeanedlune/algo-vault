@@ -1,6 +1,7 @@
 # medium/binary-search/python/binary-search.py
 from typing import List
 
+
 def binary_search(nums: List[int], target: int) -> int:
     """
     Binary Search Algorithm
