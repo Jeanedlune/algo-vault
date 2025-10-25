@@ -37,4 +37,10 @@ if __name__ == "__main__":
 
     for nums, target, expected in test_cases:
         result = binary_search(nums, target)
-        print(f"nums={nums}, target={target} → result={result}, expected={expected}")
+        if isinstance(expected, str):
+            # For duplicates, ensure the returned index points to the target.
+            assert nums[result] == target
+        else:
+            assert result == expected
+
+    print("All test cases passed!")
