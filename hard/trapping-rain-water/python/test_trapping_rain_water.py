@@ -19,3 +19,10 @@ def test_no_water():
 
 def test_flat_surface():
     assert trap([3, 3, 3, 3]) == 0
+
+def test_empty_list():
+    assert trap([]) == 0
+
+
+def test_single_element():
+    assert trap([5]) == 0

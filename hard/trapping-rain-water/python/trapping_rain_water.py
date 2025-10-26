@@ -5,6 +5,9 @@ def trap(height: List[int]) -> int:
     left_max = right_max = 0
     water = 0
 
+    if not height:  # Guard clause for empty input
+        return 0
+
     while left < right:
         if height[left] < height[right]:
             if height[left] >= left_max:
