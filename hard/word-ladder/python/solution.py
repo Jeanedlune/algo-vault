@@ -1,3 +1,4 @@
+import string
 from typing import List
 from collections import deque
 
@@ -14,7 +15,7 @@ def word_ladder(begin_word: str, end_word: str, word_list: List[str]) -> int:
     Returns:
         Length of shortest transformation sequence, or 0 if no path exists
 
-    Time Complexity: O(N * L * 26) where N is number of words, L is word length
+    Time Complexity: O(N * L^2) where N is number of words, L is word length
     Space Complexity: O(N * L) for queue and visited set
     """
     # If end_word not in word_list, no transformation possible
@@ -32,7 +33,7 @@ def word_ladder(begin_word: str, end_word: str, word_list: List[str]) -> int:
         # Try changing each character position
         for i in range(len(current_word)):
             # Try all 26 lowercase letters
-            for c in "abcdefghijklmnopqrstuvwxyz":
+            for c in string.ascii_lowercase:
                 # Skip if same character
                 if c == current_word[i]:
                     continue

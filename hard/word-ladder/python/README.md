@@ -68,10 +68,10 @@ Explanation: hot -> dot (2 words total)
 
 ## Complexity Analysis
 
-- **Time Complexity**: `O(N * L * 26)` 
+- **Time Complexity**: `O(N * L^2)` 
   - N = number of words in wordList
   - L = length of each word
-  - 26 = trying all lowercase letters
+  - L^2 factor comes from: trying all positions (L) × string slicing/concatenation (L)
   
 - **Space Complexity**: `O(N * L)`
   - Queue storage: O(N)
