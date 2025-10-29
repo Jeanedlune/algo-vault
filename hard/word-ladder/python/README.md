@@ -80,16 +80,19 @@ Explanation: hot -> dot (2 words total)
 
 ## Approach
 
-This problem is solved using **Breadth-First Search (BFS)**:
+This problem is solved using **Bidirectional Breadth-First Search (BFS)**:
 
 1. Convert `wordList` to a set for O(1) lookups
-2. Use BFS starting from `beginWord`
-3. For each word, try changing each character position to all 26 letters
-4. If the new word is in `wordList` and not visited, add it to the queue
-5. Track the level (distance) at each step
-6. Return level when `endWord` is reached
-7. Return 0 if queue is exhausted without finding `endWord`
+2. Initialize two BFS searches: one from `beginWord` and one from `endWord`
+3. Maintain separate queues and visited sets for each direction
+4. In each iteration, expand the smaller frontier (optimization)
+5. For each word, try changing each character position to all 26 letters
+6. If a word from one search is found in the other search's visited set, a path is found
+7. Return the combined path length when searches meet
+8. Return 0 if either queue is exhausted without finding a connection
 
+**Why Bidirectional BFS?**
+By searching from both ends simultaneously, we significantly reduce the search space from O(b^d) to O(2 * b^(d/2)), where b is the branching factor and d is the depth.
 ## Implementation
 
 See `solution.py` for the Python implementation.

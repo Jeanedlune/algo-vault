@@ -23,11 +23,11 @@ def word_ladder(begin_word: str, end_word: str, word_list: List[str]) -> int:
         return 0
 
     # Two-way BFS: forward from begin_word, backward from end_word
-    forward_queue = deque([(begin_word, 1)])
-    backward_queue = deque([(end_word, 1)])
+    forward_queue: deque[tuple[str, int]] = deque([(begin_word, 1)])
+    backward_queue: deque[tuple[str, int]] = deque([(end_word, 1)])
 
-    forward_visited = {begin_word: 1}  # word -> level
-    backward_visited = {end_word: 1}
+    forward_visited: dict[str, int] = {begin_word: 1}
+    backward_visited: dict[str, int] = {end_word: 1}
 
     def get_neighbors(word: str) -> Set[str]:
         """Generate all valid neighbor words"""
@@ -40,7 +40,11 @@ def word_ladder(begin_word: str, end_word: str, word_list: List[str]) -> int:
                         neighbors.add(next_word)
         return neighbors
 
-    def bfs_step(queue: deque, visited: dict, other_visited: dict) -> int:
+    def bfs_step(
+        queue: deque[tuple[str, int]],
+        visited: dict[str, int],
+        other_visited: dict[str, int],
+    ) -> int:
         """
         Perform one level of BFS expansion.
         Returns path length if connection found, 0 otherwise.
@@ -78,66 +82,3 @@ def word_ladder(begin_word: str, end_word: str, word_list: List[str]) -> int:
             return result
 
     return 0
-
-
-# Original unidirectional BFS for comparison
-def word_ladder_original(begin_word: str, end_word: str, word_list: List[str]) -> int:
-    """Original unidirectional BFS implementation"""
-    word_set = set(word_list)
-    if end_word not in word_set:
-        return 0
-
-    queue = deque([(begin_word, 1)])
-    visited = {begin_word}
-
-    while queue:
-        current_word, level = queue.popleft()
-
-        for i in range(len(current_word)):
-            for c in string.ascii_lowercase:
-                if c == current_word[i]:
-                    continue
-
-                next_word = current_word[:i] + c + current_word[i + 1 :]
-
-                if next_word == end_word:
-                    return level + 1
-
-                if next_word in word_set and next_word not in visited:
-                    visited.add(next_word)
-                    queue.append((next_word, level + 1))
-
-    return 0
-
-
-# Test both implementations
-if __name__ == "__main__":
-    test_cases = [
-        ("hit", "cog", ["hot", "dot", "dog", "lot", "log", "cog"], 5),
-        ("hit", "cog", ["hot", "dot", "dog", "lot", "log"], 0),
-        ("hot", "dot", ["hot", "dot"], 2),
-        ("a", "c", ["a", "b", "c"], 2),
-        ("hit", "cog", ["hot", "hit", "cog"], 0),
-        ("red", "tax", ["ted", "tex", "red", "tax", "tad", "den", "rex", "pee"], 4),
-    ]
-
-    print("Testing both implementations:\n")
-    all_passed = True
-
-    for i, (begin, end, words, expected) in enumerate(test_cases, 1):
-        original = word_ladder_original(begin, end, words)
-        bidirectional = word_ladder(begin, end, words)
-
-        status = "✓" if original == bidirectional == expected else "✗"
-        if original != expected or bidirectional != expected:
-            all_passed = False
-
-        print(f"{status} Test {i}: {begin} -> {end}")
-        print(
-            f"  Original: {original}, Bidirectional: {bidirectional}, Expected: {expected}"
-        )
-
-    if all_passed:
-        print("\n✅ All tests passed for both implementations!")
-    else:
-        print("\n❌ Some tests failed!")
