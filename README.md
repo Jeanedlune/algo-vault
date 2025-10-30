@@ -60,7 +60,7 @@ Each language targets 45 problems.
 
 - Go: [######----------------------------------] 3/45 (7%)
 - TypeScript: [######----------------------------------] 3/45 (7%)
-- Python: [############################----------] 15/45 (33%)
+- Python: [########################################] 18/45 (40%)
 - JavaScript: [######----------------------------------] 3/45 (7%)
 - C#: [######----------------------------------] 3/45 (7%)
 - C++: [######----------------------------------] 3/45 (7%)
@@ -90,7 +90,7 @@ Each language targets 45 problems.
   - [x] Contains Duplicate (`easy/contains-duplicate/`) - 1/6 languages
 
 - Medium (15)
-  - [ ] Binary Search (`medium/binary-search/`)
+  - [x] Binary Search (`medium/binary-search/`) - 1/6 languages
   - [ ] Merge Sort
   - [ ] Quick Sort
   - [ ] Valid Parentheses
@@ -108,10 +108,10 @@ Each language targets 45 problems.
 
 - Hard (10)
   - [ ] Merge K Sorted Lists (`hard/merge-k-sorted-lists/`)
-  - [ ] Trapping Rain Water
+  - [x] Trapping Rain Water (`hard/trapping-rain-water/`) - 1/6 languages
   - [ ] Median of Two Sorted Arrays
   - [ ] Regular Expression Matching
-  - [ ] Word Ladder
+  - [x] Word Ladder (`hard/word-ladder/`) - 1/6 languages
   - [ ] Sliding Window Maximum
   - [ ] Largest Rectangle in Histogram
   - [ ] Binary Tree Maximum Path Sum
