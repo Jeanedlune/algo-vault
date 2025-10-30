@@ -63,18 +63,18 @@ Each language targets 45 problems.
 - Python: [########################################] 18/45 (40%)
 - JavaScript: [######----------------------------------] 3/45 (7%)
 - C#: [######----------------------------------] 3/45 (7%)
-- C++: [######----------------------------------] 3/45 (7%)
+- C++: [################------------------------] 8/45 (18%)
 
 ## Algorithms checklist
 
 - Easy (20)
   - [x] Two Sum (`easy/two-sum/`) - 6/6 languages ✅
-  - [x] Reverse String (`easy/reverse-string/`) - 1/6 languages
-  - [x] Palindrome Check (`easy/palindrome-check/`) - 1/6 languages
-  - [x] FizzBuzz (`easy/fizzbuzz/`) - 1/6 languages
+  - [x] Reverse String (`easy/reverse-string/`) - 2/6 languages
+  - [x] Palindrome Check (`easy/palindrome-check/`) - 2/6 languages
+  - [x] FizzBuzz (`easy/fizzbuzz/`) - 2/6 languages
   - [x] Find Maximum in Array (`easy/find-maximum/`) - 6/6 languages ✅
-  - [x] Count Vowels (`easy/count-vowels/`) - 1/6 languages
-  - [x] Factorial (`easy/factorial/`) - 1/6 languages
+  - [x] Count Vowels (`easy/count-vowels/`) - 2/6 languages
+  - [x] Factorial (`easy/factorial/`) - 2/6 languages
   - [x] Fibonacci Sequence (`easy/fibonacci/`) - 1/6 languages
   - [ ] Sum of Array
   - [x] Find Minimum (`easy/find-minimum/`) - 1/6 languages
