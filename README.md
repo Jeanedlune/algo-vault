@@ -63,7 +63,7 @@ Each language targets 45 problems.
 - Python: [########################################] 18/45 (40%)
 - JavaScript: [######----------------------------------] 3/45 (7%)
 - C#: [######----------------------------------] 3/45 (7%)
-- C++: [################------------------------] 8/45 (18%)
+- C++: [#################################-------] 15/45 (33%)
 
 ## Algorithms checklist
 
@@ -75,19 +75,19 @@ Each language targets 45 problems.
   - [x] Find Maximum in Array (`easy/find-maximum/`) - 6/6 languages ✅
   - [x] Count Vowels (`easy/count-vowels/`) - 2/6 languages
   - [x] Factorial (`easy/factorial/`) - 2/6 languages
-  - [x] Fibonacci Sequence (`easy/fibonacci/`) - 1/6 languages
+  - [x] Fibonacci Sequence (`easy/fibonacci/`) - 2/6 languages
   - [ ] Sum of Array
-  - [x] Find Minimum (`easy/find-minimum/`) - 1/6 languages
-  - [x] Remove Duplicates (`easy/remove-duplicates/`) - 1/6 languages
-  - [x] Anagram Check (`easy/anagram-check/`) - 1/6 languages
+  - [x] Find Minimum (`easy/find-minimum/`) - 2/6 languages
+  - [x] Remove Duplicates (`easy/remove-duplicates/`) - 2/6 languages
+  - [x] Anagram Check (`easy/anagram-check/`) - 2/6 languages
   - [ ] First Unique Character
-  - [x] Valid Palindrome (`easy/valid-palindrome/`) - 1/6 languages
+  - [x] Valid Palindrome (`easy/valid-palindrome/`) - 2/6 languages
   - [ ] Reverse Integer
   - [ ] Plus One
-  - [x] Move Zeroes (`easy/move-zeroes/`) - 1/6 languages
+  - [x] Move Zeroes (`easy/move-zeroes/`) - 2/6 languages
   - [ ] Single Number
   - [x] Majority Element (`easy/majority-element/`) - 6/6 languages ✅
-  - [x] Contains Duplicate (`easy/contains-duplicate/`) - 1/6 languages
+  - [x] Contains Duplicate (`easy/contains-duplicate/`) - 2/6 languages
 
 - Medium (15)
   - [x] Binary Search (`medium/binary-search/`) - 1/6 languages
