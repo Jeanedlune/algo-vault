@@ -58,7 +58,7 @@ algo-vault/
 
 Each language targets 45 problems.
 
-- Go: [##########------------------------------] 5/45 (11%)
+- Go: [######################------------------] 10/45 (22%)
 - TypeScript: [########--------------------------------] 4/45 (9%)
 - Python: [##########################################] 19/45 (42%)
 - JavaScript: [########--------------------------------] 4/45 (9%)
@@ -69,12 +69,12 @@ Each language targets 45 problems.
 
 - Easy (20)
   - [x] Two Sum (`easy/two-sum/`) - 6/6 languages ✅
-  - [x] Reverse String (`easy/reverse-string/`) - 2/6 languages
-  - [x] Palindrome Check (`easy/palindrome-check/`) - 2/6 languages
-  - [x] FizzBuzz (`easy/fizzbuzz/`) - 2/6 languages
+  - [x] Reverse String (`easy/reverse-string/`) - 3/6 languages
+  - [x] Palindrome Check (`easy/palindrome-check/`) - 3/6 languages
+  - [x] FizzBuzz (`easy/fizzbuzz/`) - 3/6 languages
   - [x] Find Maximum in Array (`easy/find-maximum/`) - 6/6 languages ✅
-  - [x] Count Vowels (`easy/count-vowels/`) - 2/6 languages
-  - [x] Factorial (`easy/factorial/`) - 2/6 languages
+  - [x] Count Vowels (`easy/count-vowels/`) - 3/6 languages
+  - [x] Factorial (`easy/factorial/`) - 3/6 languages
   - [x] Fibonacci Sequence (`easy/fibonacci/`) - 3/6 languages
   - [ ] Sum of Array
   - [x] Find Minimum (`easy/find-minimum/`) - 2/6 languages
