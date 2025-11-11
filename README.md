@@ -58,7 +58,7 @@ algo-vault/
 
 Each language targets 45 problems.
 
-- Go: [######################------------------] 10/45 (22%)
+- Go: [#################################-------] 15/45 (33%)
 - TypeScript: [########--------------------------------] 4/45 (9%)
 - Python: [##########################################] 19/45 (42%)
 - JavaScript: [########--------------------------------] 4/45 (9%)
@@ -81,7 +81,7 @@ Each language targets 45 problems.
   - [x] Remove Duplicates (`easy/remove-duplicates/`) - 3/6 languages
   - [x] Anagram Check (`easy/anagram-check/`) - 2/6 languages
   - [ ] First Unique Character
-  - [x] Valid Palindrome (`easy/valid-palindrome/`) - 3/6 languages
+  - [x] Valid Palindrome (`easy/valid-palindrome/`) - 4/6 languages
   - [ ] Reverse Integer
   - [ ] Plus One
   - [x] Move Zeroes (`easy/move-zeroes/`) - 3/6 languages
@@ -90,7 +90,7 @@ Each language targets 45 problems.
   - [x] Contains Duplicate (`easy/contains-duplicate/`) - 4/6 languages
 
 - Medium (15)
-  - [x] Binary Search (`medium/binary-search/`) - 1/6 languages
+  - [x] Binary Search (`medium/binary-search/`) - 2/6 languages
   - [ ] Merge Sort
   - [ ] Quick Sort
   - [ ] Valid Parentheses
@@ -107,11 +107,11 @@ Each language targets 45 problems.
   - [ ] Kth Largest Element
 
 - Hard (10)
-  - [ ] Merge K Sorted Lists (`hard/merge-k-sorted-lists/`)
-  - [x] Trapping Rain Water (`hard/trapping-rain-water/`) - 1/6 languages
+  - [x] Merge K Sorted Lists (`hard/merge-k-sorted-lists/`) - 1/6 languages
+  - [x] Trapping Rain Water (`hard/trapping-rain-water/`) - 2/6 languages
   - [ ] Median of Two Sorted Arrays
   - [ ] Regular Expression Matching
-  - [x] Word Ladder (`hard/word-ladder/`) - 1/6 languages
+  - [x] Word Ladder (`hard/word-ladder/`) - 2/6 languages
   - [ ] Sliding Window Maximum
   - [ ] Largest Rectangle in Histogram
   - [ ] Binary Tree Maximum Path Sum
