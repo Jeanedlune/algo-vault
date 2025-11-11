@@ -26,16 +26,16 @@ func MergeKSortedLists(lists [][]int) []int {
 	var result []int
 	minHeap := &MinHeap{}
 	heap.Init(minHeap)
-	
+
 	for _, list := range lists {
 		for _, num := range list {
 			heap.Push(minHeap, num)
 		}
 	}
-	
+
 	for minHeap.Len() > 0 {
 		result = append(result, heap.Pop(minHeap).(int))
 	}
-	
+
 	return result
 }

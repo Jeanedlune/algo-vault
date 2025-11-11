@@ -4,7 +4,7 @@ import "unicode"
 
 func IsPalindrome(s string) bool {
 	left, right := 0, len(s)-1
-	
+
 	for left < right {
 		for left < right && !isAlphanumeric(s[left]) {
 			left++
@@ -12,7 +12,7 @@ func IsPalindrome(s string) bool {
 		for left < right && !isAlphanumeric(s[right]) {
 			right--
 		}
-		
+
 		if left < right {
 			if unicode.ToLower(rune(s[left])) != unicode.ToLower(rune(s[right])) {
 				return false
@@ -21,7 +21,7 @@ func IsPalindrome(s string) bool {
 			right--
 		}
 	}
-	
+
 	return true
 }
 
