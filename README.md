@@ -76,16 +76,16 @@ Each language targets 45 problems.
   - [x] Count Vowels (`easy/count-vowels/`) - 3/6 languages
   - [x] Factorial (`easy/factorial/`) - 3/6 languages
   - [x] Fibonacci Sequence (`easy/fibonacci/`) - 3/6 languages
-  - [ ] Sum of Array
+  - [x] Sum of Array (`easy/sum-array/`) - 1/6 languages
   - [x] Find Minimum (`easy/find-minimum/`) - 2/6 languages
   - [x] Remove Duplicates (`easy/remove-duplicates/`) - 3/6 languages
   - [x] Anagram Check (`easy/anagram-check/`) - 2/6 languages
-  - [ ] First Unique Character
+  - [x] First Unique Character (`easy/first-unique-character/`) - 1/6 languages
   - [x] Valid Palindrome (`easy/valid-palindrome/`) - 4/6 languages
-  - [ ] Reverse Integer
-  - [ ] Plus One
+  - [x] Reverse Integer (`easy/reverse-integer/`) - 1/6 languages
+  - [x] Plus One (`easy/plus-one/`) - 1/6 languages
   - [x] Move Zeroes (`easy/move-zeroes/`) - 3/6 languages
-  - [ ] Single Number
+  - [x] Single Number (`easy/single-number/`) - 1/6 languages
   - [x] Majority Element (`easy/majority-element/`) - 6/6 languages ✅
   - [x] Contains Duplicate (`easy/contains-duplicate/`) - 4/6 languages
 
